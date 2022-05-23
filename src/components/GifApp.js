@@ -5,13 +5,13 @@ import { GifGrid } from "./GifGrid";
 
 const GifApp = () => {
 
-    const [ categories, setCategories] = useState(['Naruto']);
+    const [ categories, setCategories] = useState(['']);
 
     return(
         <>
-            <h2>Gif APP</h2>
+            <h1>Gif APP</h1>
             <AddCategory  setCategories={ setCategories }/>
-            <hr />
+            
             
             <ul>
                 {categories.map( ( category ) => 

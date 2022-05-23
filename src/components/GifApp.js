@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { AddCategory } from "./AddCategory";
 
+
 const GifApp = () => {
 
     const [ categories, setCategories] = useState(['One Punch', 'Naruto', 'Dragon Ball']);

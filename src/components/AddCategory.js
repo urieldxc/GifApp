@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 
-export const AddCategory = () => {
+export const AddCategory = ({ setCategories }) => {
 
-   const [inputValue, setInputValue] = useState('Hola');
+   const [ inputValue, setInputValue ] = useState( 'Hola' );
+
    const handleInputChange = ( e ) => {
        setInputValue(e.target.value)
    }
-   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Submit hecho')
+
+   const handleSubmit = ( e ) => {
+        e.preventDefault();
+        setCategories( cats => [ ...cats, inputValue ] )
    }
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={ handleSubmit }>
             <input
                 type="text"
-                value={inputValue}
-                onChange={handleInputChange}
+                value={ inputValue }
+                onChange={ handleInputChange }
             />
         </form>
     )

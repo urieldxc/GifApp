@@ -12,12 +12,12 @@ const GifApp = () => {
     return(
         <>
             <h2>Gif APP</h2>
-            <AddCategory />
+            <AddCategory  setCategories={ setCategories }/>
             <hr />
             
             <ul>
-                {categories.map( (category) => {
-                    return <li key={category}>{category}</li>;
+                {categories.map( ( category ) => {
+                    return <li key={category}>{ category }</li>;
                 } )}
             </ul>
         </> 
